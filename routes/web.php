@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BloggerController;
+use App\Http\Controllers\DriverController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,3 +29,7 @@ Route::middleware([
 });
 
 Route::get("/bloggers", [BloggerController::class, "roles"]);
+Route::get("/roles", [BloggerController::class, "getBloggers"]);
+
+Route::get("/cars", [DriverController::class, "drivers"]);
+Route::get("/drivers", [DriverController::class, "cars"]);

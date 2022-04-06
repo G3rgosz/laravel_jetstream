@@ -5,11 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Role extends Model
+class Car extends Model
 {
     use HasFactory;
-
-    public function bloggers(){
-        return $this->belongsToMany(Blogger::class);
+    public function drivers(){
+        return $this->belongsToMany(Driver::class);
     }
 }
